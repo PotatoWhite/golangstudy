@@ -9,6 +9,11 @@ const (
 	SmallRoom
 )
 
+// const (
+// 	C1 uint8 = iota * -1
+// 	C2
+// )
+
 func SetLight(rooms, room uint8) uint8 {
 	return rooms | room
 }
