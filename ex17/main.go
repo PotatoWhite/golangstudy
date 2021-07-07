@@ -6,7 +6,10 @@ func main() {
 	// example01()
 	// example02()
 	// example03()
-	example04()
+	// example04()
+	// example05()
+	// example06()
+	example07()
 }
 
 func example01() {
@@ -78,4 +81,34 @@ func changeArray(array2 [5]int) {
 
 func changeSlice(slice2 []int) {
 	slice2[2] = 200
+}
+
+func example05() {
+	slice := []int{1, 2, 3}
+	addNum(slice)
+	fmt.Println(slice)
+}
+
+func addNum(slice []int) {
+	slice = append(slice, 4, 5)
+}
+
+func example06() {
+	slice := []int{1, 2, 3}
+	addNum2(&slice)
+	fmt.Println(slice)
+}
+
+func addNum2(slice *[]int) {
+	*slice = append(*slice, 4, 5)
+}
+
+func example07() {
+	slice := []int{1, 2, 3}
+	slice = addNum3(slice)
+	fmt.Println(slice)
+}
+
+func addNum3(slice []int) []int {
+	return append(slice, 4, 5)
 }
